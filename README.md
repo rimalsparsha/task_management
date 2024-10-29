@@ -30,7 +30,7 @@ git clone https://github.com/rimalsparsha/task_management.git
 cd task_management
 
 2. Create a .env File
-```bash
+
 SECRET_KEY="YOUR_SECRET_KEY"
 DEBUG="YOUR_DEBUG"
 DB_NAME=your_database_name
@@ -38,5 +38,5 @@ DB_USER=your_database_user
 DB_PASSWORD=your_database_password
 
 3. Build and Run the Application
-```bash
+
 docker-compose up --build
