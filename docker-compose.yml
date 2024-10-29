@@ -34,7 +34,7 @@ services:  # Defines the services to be created in the Docker Compose environmen
       - .env
     depends_on:
       - db
-    restart: "no"  # No restart policy, since tests run only once
+    restart: "no"
 
 volumes:  # Defines named volumes to persist data.
   postgres_data:
