@@ -24,8 +24,8 @@ The Task Management API is a Django-based application that allows authenticated 
 
 ## Setup Instructions
 
-1. Clone the Repository
 ```bash
+1. Clone the Repository
 git clone https://github.com/rimalsparsha/task_management.git
 cd task_management
 
