@@ -63,6 +63,6 @@ docker-compose up --build
 
 python manage.py test
 
-6. Running Tests with Docker Compose :
+6. Running Tests with Docker Compose:
 
 The test suite runs automatically when starting the application with Docker Compose.
