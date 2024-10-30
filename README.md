@@ -25,11 +25,12 @@ The Task Management API is a Django-based application that allows authenticated 
 ## Setup Instructions
 
 ```bash
-1. Clone the Repository
+1. Clone the Repository:
+
 git clone https://github.com/rimalsparsha/task_management.git
 cd task_management
 
-2. Set up PostgreSQL Database in settings.py
+2. Set up PostgreSQL Database in settings.py:
 
 DATABASES = {
     'default': {
@@ -43,7 +44,7 @@ DATABASES = {
 }
 
 
-3. Create a .env File
+3. Create a .env File:
 
 SECRET_KEY="YOUR_SECRET_KEY"
 DEBUG=True  # Set to False in production
@@ -54,14 +55,14 @@ DB_HOST="db"  # Container name for the database in Docker Compose
 DB_PORT="5432"
 
 
-4. Build and Run the Application with Docker Compose
+4. Build and Run the Application with Docker Compose:
 
 docker-compose up --build
 
-5. Running Tests Directly
+5. Running Tests Directly:
 
 python manage.py test
 
-6. Running Tests with Docker Compose 
+6. Running Tests with Docker Compose :
 
 The test suite runs automatically when starting the application with Docker Compose.
