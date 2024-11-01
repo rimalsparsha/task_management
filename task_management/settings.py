@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'authentication',
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
     'tasks',
 ]
 
@@ -154,6 +156,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 SIMPLE_JWT = {
@@ -161,4 +164,15 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),     # Refresh token lifetime
     'ROTATE_REFRESH_TOKENS': True,                    # Rotate refresh tokens
     'BLACKLIST_AFTER_ROTATION': True,                  # Blacklist old refresh tokens
+}
+
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Task Management API',
+    'DESCRIPTION': 'This is an API for registering user and managing task',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'SWAGGER_UI_DIST': 'SIDECAR',  # shorthand to use the sidecar instead
+    'SWAGGER_UI_FAVICON_HREF': 'SIDECAR',
+    'REDOC_DIST': 'SIDECAR',
 }
