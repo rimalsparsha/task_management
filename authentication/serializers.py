@@ -13,3 +13,7 @@ class UserCreateSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])  # Hash the password
         user.save()
         return user
+
+
+class LogoutSerializer(serializers.Serializer):
+    refresh = serializers.CharField()

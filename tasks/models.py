@@ -12,3 +12,6 @@ class Task(models.Model):
 
     def __str__(self):
         return f"{self.title} by {self.user.username}"
+
+    class Meta:
+        ordering = ["-created_at"]
